@@ -1,0 +1,85 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    background: radial-gradient(ellipse at top, #FFFBF7 0%, #FAF4EC 60%, #F3E7D8 100%);
+    color: #1E1611;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    min-height: 100vh;
+  }
+}
+
+/* Kheelona Glass & Surface Primitives */
+.glass-panel {
+  background: rgba(255, 255, 255, 0.92);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(234, 220, 207, 0.8);
+  box-shadow: 0 12px 32px -8px rgba(30, 22, 17, 0.05), 0 4px 12px -2px rgba(0, 0, 0, 0.03);
+}
+
+.glass-panel-interactive {
+  background: rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(234, 220, 207, 0.7);
+  transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.glass-panel-interactive:hover {
+  background: #FFFFFF;
+  border-color: rgba(242, 107, 39, 0.4);
+  box-shadow: 0 14px 36px -6px rgba(242, 107, 39, 0.12);
+  transform: translateY(-2px);
+}
+
+.glass-modal {
+  background: rgba(255, 253, 249, 0.96);
+  backdrop-filter: blur(24px);
+  border: 1px solid rgba(234, 220, 207, 0.9);
+  box-shadow: 0 25px 50px -12px rgba(41, 28, 20, 0.18);
+}
+
+/* Warm Paper Grid Pattern */
+.canvas-grid-pattern {
+  background-size: 28px 28px;
+  background-image: 
+    linear-gradient(to right, rgba(160, 69, 21, 0.05) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(160, 69, 21, 0.05) 1px, transparent 1px);
+}
+
+/* Custom Sleek Warm Scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: rgba(242, 232, 220, 0.6);
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(160, 69, 21, 0.25);
+  border-radius: 9999px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(242, 107, 39, 0.6);
+}
+
+/* Operational Transformation Diff highlights */
+.ot-added {
+  background-color: rgba(16, 185, 129, 0.15);
+  color: #047857;
+  border-radius: 4px;
+  padding: 0 4px;
+}
+
+.ot-removed {
+  background-color: rgba(239, 68, 68, 0.15);
+  color: #B91C1C;
+  text-decoration: line-through;
+  border-radius: 4px;
+  padding: 0 4px;
+}
